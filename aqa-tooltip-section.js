@@ -1,7 +1,9 @@
-<link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="../aqa-font/aqa-trirong-font.html">
-<dom-module id="aqa-tooltip-section">
-    <template>
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+import '@nylon/aqa-font/aqa-trirong-font.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+class AqaTooltipSection extends PolymerElement {
+  static get template() {
+    return html`
         <style>
             .tooltip {
                 position: fixed;
@@ -37,20 +39,17 @@
         <div id="tooltip" class="tooltip">
             [[label]]
         </div>
-    </template>
-    <script>
-        class AqaTooltipSection extends Polymer.Element {
-            static get is() { return 'aqa-tooltip-section'; }
-            static get properties() {
-                return {
-                    label: {
-                        type: String,
-                        value: 'Tooltip'
-                    }
-                }
-            }
-        }
-        window.customElements.define(AqaTooltipSection.is, AqaTooltipSection);
+`;
+  }
 
-    </script>
-</dom-module>
+  static get is() { return 'aqa-tooltip-section'; }
+  static get properties() {
+      return {
+          label: {
+              type: String,
+              value: 'Tooltip'
+          }
+      }
+  }
+}
+window.customElements.define(AqaTooltipSection.is, AqaTooltipSection);
