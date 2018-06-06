@@ -1,5 +1,5 @@
 import { PolymerElement } from '@polymer/polymer/polymer-element.js';
-import '@nylon/aqa-font/aqa-trirong-font.js';
+import '@9lon/aqa-font/aqa-trirong-font.js';
 import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 class AqaTooltipSection extends PolymerElement {
   static get template() {
